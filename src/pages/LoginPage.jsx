@@ -2,12 +2,14 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 export const LoginPage = () => {
+    // Local state
     const [userInputs, setUserInputs] = useState({
         name: '',
         email: '',
         password: ''
     })
 
+    // To make form fields as controlled inputs
     const handleUserInputs = (e) => {
         setUserInputs({
             ...userInputs,
@@ -15,6 +17,7 @@ export const LoginPage = () => {
         })
     }
 
+    // invoke useNavigate() hook
     const navigate = useNavigate()
 
     const handleSubmit = (e) => {
@@ -74,7 +77,13 @@ export const LoginPage = () => {
                     name='password'
                 />
             </div>
-            <button type="submit" onClick={handleSubmit} className="btn btn-primary">Submit</button>
+            
+            <button 
+                type="submit" 
+                onClick={handleSubmit} 
+                className="btn btn-primary"
+            >
+                Submit</button>
         </form>
     )
 }

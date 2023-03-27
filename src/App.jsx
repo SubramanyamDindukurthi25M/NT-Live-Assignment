@@ -4,7 +4,7 @@ import { WelcomePage } from "./pages/WelcomePage"
 
 export const App = () => {
     return (
-        <>
+        <section className="px-2 mt-2">
             <Routes>
                 <Route 
                     path='/'
@@ -15,6 +15,6 @@ export const App = () => {
                     element={<WelcomePage/>}
                 />
             </Routes>
-        </>
+        </section>
     )
 }
